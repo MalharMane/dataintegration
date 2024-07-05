@@ -53,7 +53,7 @@ const Dynamiccharts = () => {
         <tr>
           
           <th>Sr.No.</th>
-          <th>Reading</th>
+          <th>Readings</th>
           
         </tr>
       </thead>
