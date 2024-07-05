@@ -6,7 +6,7 @@ function Routercomp() {
     <div>
     
       <Link to='/'>Home</Link> &nbsp;
-      <Link to='/aboutus' >Aboutus</Link> &nbsp;
+      <Link to='/aboutus' >Aboutuyyyys</Link> &nbsp;
       <Link to='/contactus' >Contactus</Link> &nbsp;
     
     </div>

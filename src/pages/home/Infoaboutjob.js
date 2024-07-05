@@ -1,8 +1,11 @@
 import Accordion from 'react-bootstrap/Accordion';
 
+
+
+
 function Infoaboutjob() {
   return (
-    <Accordion defaultActiveKey={['0']} alwaysOpen>
+    <Accordion defaultActiveKey={['0']} alwaysOpen >
       <Accordion.Item eventKey="0">
         <Accordion.Header>Job Inspection</Accordion.Header>
         <Accordion.Body>

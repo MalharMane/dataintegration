@@ -1,9 +1,13 @@
 import React from 'react'
 
+
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
+import Button from 'react-bootstrap/Button';
 
+import Nav from 'react-bootstrap/Nav';
 
+import Tab from 'react-bootstrap/Tab';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -14,6 +18,7 @@ import Card from 'react-bootstrap/Card';
 
 import Linechart from './Linechart';
 import Barchart from './Barchart';
+import Doughnutchart from './Doughnutchart';
 
 import "./Chart.css";
 
@@ -27,20 +32,17 @@ defaults.plugins.title.font.size = 20;
 defaults.plugins.title.color = "black";
 
 
-function Tableandchart() {
-    return (
-      <div>
-           
-       
-  
-  <div className='py-3'>
-  
-      <Container fluid >
-        <Row >
-  
-          <Col sm >
-          <div>
-          <Card >
+
+const Dynamiccharts = () => {
+  return (
+    <div className='pb-3'>
+
+<Container>
+      <Row>
+      
+        <Col sm>
+
+        <Card >
         <Card.Header>Production</Card.Header>
         <Card.Body>
           <Card.Title>Type : QSK-23</Card.Title>
@@ -89,17 +91,34 @@ function Tableandchart() {
           </Card.Text>
         </Card.Body>
       </Card>
-      </div>
-      </Col>
-  
-     
-  
+          
+        </Col>
+
+        
+        <Col sm>
 
 
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+      <Row>
+        <Col sm={3}>
+          <Nav  className="flex-column" >
+            <Nav.Item>
+              <Nav.Link eventKey="first"><Button variant="primary">Bar chart</Button>{' '}</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second"><Button variant="secondary">Line chart</Button>{' '}</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="third"><Button variant="success">Doughnut chart</Button></Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Col>
+        <Col sm={9}>
+          <Tab.Content>
+            <Tab.Pane eventKey="first">
 
 
-
-      <Col sm > <Card >
+            <Card >
       <Card.Header>Bar chart</Card.Header>
       <Card.Body>
         <Card.Title><h6>Tolerance : 157.35 - 157.50</h6></Card.Title>
@@ -135,17 +154,13 @@ function Tableandchart() {
         </Card.Text>
       </Card.Body>
     </Card>
-    </Col>
 
 
+            </Tab.Pane>
+            <Tab.Pane eventKey="second">
 
-  
-  
-      
-  
-          <Col sm >
-          <div >
-          <Card >
+
+            <Card >
         <Card.Header>Line chart</Card.Header>
         <Card.Body>
           <Card.Title><h6>Tolerance : 157.35 - 157.50</h6></Card.Title>
@@ -187,25 +202,44 @@ function Tableandchart() {
           </Card.Text>
         </Card.Body>
       </Card>
-      </div>
-      </Col>
-  
-        </Row>
-      </Container>
-  
-  </div>
-                   
-  
-  
-  
-      
-  
-  
-  
-  
-  </div>
-    )
-  }
-  
-  
-  export default Tableandchart ;
+
+
+            </Tab.Pane>
+
+            <Tab.Pane eventKey="third">
+
+            <Card >
+      <Card.Header>Doughnut chart</Card.Header>
+      <Card.Body>
+        <Card.Title><h6>Special title treatment</h6></Card.Title>
+        <Card.Text>
+        <Doughnutchart></Doughnutchart>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+              
+            </Tab.Pane>
+
+          </Tab.Content>
+        </Col>
+      </Row>
+    </Tab.Container>
+
+
+        </Col>
+       
+      </Row>
+    </Container>
+
+
+
+
+
+
+
+
+    </div>
+  )
+}
+
+export default Dynamiccharts;

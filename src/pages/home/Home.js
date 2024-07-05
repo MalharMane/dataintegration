@@ -17,6 +17,7 @@ import Polarchart from './Polarchart';
 import Navhead from './Navhead';
 import Tableandchart from './Tableandchart';
 import Infoaboutjob from './Infoaboutjob';
+import  Dynamiccharts from './Dynamiccharts';
 
 import "./Chart.css";
 
@@ -49,6 +50,9 @@ function Home() {
 
 
 <div className='p-5'><Infoaboutjob></Infoaboutjob></div>
+
+
+<div> <Dynamiccharts></Dynamiccharts></div>
 
 
      <div>
