@@ -18,6 +18,7 @@ import Navhead from './Navhead';
 import Tableandchart from './Tableandchart';
 import Infoaboutjob from './Infoaboutjob';
 import  Dynamiccharts from './Dynamiccharts';
+import Dashboard from './Dashboard';
 
 import "./Chart.css";
 
@@ -125,10 +126,12 @@ function Home() {
       </Row>
     </Container>
 
+
+
 </div>
                  
 
-
+<div fluid ><Dashboard></Dashboard></div>
 
     
 

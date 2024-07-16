@@ -12,11 +12,7 @@ function Contactus() {
     Contactus
     
 
-    <div><Container>
-      <Row>
-        <Col>1 of 1</Col>
-      </Row>
-    </Container></div>
+    
 
    
     </div>

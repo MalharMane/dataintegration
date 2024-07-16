@@ -97,8 +97,6 @@ function Tableandchart() {
 
 
 
-
-
       <Col sm > <Card >
       <Card.Header>Bar chart</Card.Header>
       <Card.Body>
